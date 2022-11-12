@@ -1,5 +1,8 @@
 # deployment
 
+## add your main subdomain to the server ip
+
+
 ## install your server on the cloud and make sure you can connect it with ssh
 
 ```
