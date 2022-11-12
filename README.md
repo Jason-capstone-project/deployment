@@ -82,3 +82,30 @@ docker-compose --version
 ```
 apt install -y git wget curl zsh  tmux
 ```
+
+## install ohmyzsh
+```
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+### change your ~/.zshrc
+```
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="intheloop"
+
+plugins=(
+git
+npm
+yarn
+docker
+docker-compose
+tmux
+ubuntu
+)
+
+source $ZSH/oh-my-zsh.sh
+
+```
+
+## add zsh at the end of file of ~/.bashrc
