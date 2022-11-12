@@ -64,6 +64,8 @@ echo \
 
 sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+
+docker --version
 ```
 
 ## install docker compose
@@ -78,5 +80,5 @@ docker-compose --version
 
 ## install packages
 ```
-apt install -y git wget curl zsh pv tmux
+apt install -y git wget curl zsh  tmux
 ```
