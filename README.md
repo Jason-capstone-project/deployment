@@ -6,7 +6,7 @@
 ## install your server on the cloud and make sure you can connect it with ssh
 
 ```
-ssh -i <key> <username>@codevteacher.com
+ssh -i <key> <username>@server.codevteacher.com
 apt update
 apt install nano
 ```
@@ -36,7 +36,7 @@ nano authorized_keys
 exit from terminal and try to login with root
 
 ```
-ssh root@codevteacher.com
+ssh root@server.codevteacher.com
 ```
 
 
@@ -129,7 +129,9 @@ source $ZSH/oh-my-zsh.sh
 ```
 docker swarm init
 
-docker swarm init --advertise-addr <public address>
+# Or
+
+docker swarm init --advertise-addr $(curl ifconfig.me)
 ```
 
 ## Traefik Proxy with HTTPS
