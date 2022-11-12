@@ -142,7 +142,7 @@ export NODE_ID=$(docker info -f '{{.Swarm.NodeID}}')
 
 docker node update --label-add traefik-public.traefik-public-certificates=true $NODE_ID
 
-export EMAIL=<your email>
+export EMAIL=info@codevteacher.com
 export DOMAIN=traefik.codevteacher.com
 
 export USERNAME=root
@@ -170,3 +170,4 @@ docker node update --label-add swarmpit.influx-data=true $NODE_ID
 curl -L dockerswarm.rocks/swarmpit.yml -o swarmpit.yml
 docker stack deploy -c swarmpit.yml swarmpit
 ```
+
