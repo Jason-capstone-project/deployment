@@ -12,6 +12,7 @@ apt install nano
 ```
 
 
+
 ## on your computer make sure you have ssh key
 
 if you don't have
@@ -30,6 +31,13 @@ copy public key in your clip board
 sudo su
 cd /root/.ssh/
 nano authorized_keys
+```
+
+## generate sshkey and add into github
+```
+ssh-keygen
+
+cat /root/.ssh/id_rsa.pub
 ```
 
 exit from terminal and try to login with root
