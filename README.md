@@ -14,7 +14,7 @@ ssh-keygen
 ```
 
 ```
-cat ~/.ssh/id_rsa.pu
+cat ~/.ssh/id_rsa.pub
 ```
 copy public key in your clip board
 
@@ -24,3 +24,4 @@ copy public key in your clip board
 cd /root/.ssh/
 nano authorized_keys
 ```
+
