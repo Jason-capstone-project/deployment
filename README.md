@@ -33,6 +33,13 @@ cd /root/.ssh/
 nano authorized_keys
 ```
 
+exit from terminal and try to login with root
+
+```
+ssh root@codevteacher.com
+```
+
+
 ## generate sshkey and add into github
 ```
 ssh-keygen
@@ -40,16 +47,10 @@ ssh-keygen
 cat /root/.ssh/id_rsa.pub
 ```
 
-exit from terminal and try to login with root
-
-```
-ssh root@codevteacher.com
-```
-
 # add hostname
 
 ```
-export USE_HOSTNAME=deployment.codevteacher.com
+export USE_HOSTNAME=server.codevteacher.com
 sudo echo $USE_HOSTNAME > /etc/hostname
 sudo hostname -F /etc/hostname
 
