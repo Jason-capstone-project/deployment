@@ -47,7 +47,6 @@ reboot
 
 ```
 apt-get update
-apt-get upgrade -y
 ```
 
 ## install docker
