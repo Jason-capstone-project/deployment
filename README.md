@@ -9,9 +9,16 @@ ssh -i <key> <username>@<server ip or domain>
 ## on your computer make sure you have ssh key
 
 if you don't have
-copy the public key in your clipboard
+```
+ssh-keygen
+```
 
-## make sure you copy your public key to the root ssh folder
+```
+cat ~/.ssh/id_rsa.pu
+```
+copy public key in your clip board
+
+## make sure you copy your public key to root ssh folder
 
 ```
 cd /root/.ssh/
