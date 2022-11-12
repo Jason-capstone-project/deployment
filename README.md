@@ -6,7 +6,7 @@
 ## install your server on the cloud and make sure you can connect it with ssh
 
 ```
-ssh -i <key> <username>@<server ip or domain>
+ssh -i <key> <username>@codevteacher.com
 ```
 
 ## on your computer make sure you have ssh key
@@ -32,13 +32,13 @@ nano authorized_keys
 exit from terminal and try to login with root
 
 ```
-ssh root@<server ip or domain>
+ssh root@codevteacher.com
 ```
 
 # add hostname
 
 ```
-export USE_HOSTNAME=<servername>.<yourDomain>
+export USE_HOSTNAME=deployment.codevteacher.com
 sudo echo $USE_HOSTNAME > /etc/hostname
 sudo hostname -F /etc/hostname
 
@@ -129,7 +129,7 @@ export NODE_ID=$(docker info -f '{{.Swarm.NodeID}}')
 docker node update --label-add traefik-public.traefik-public-certificates=true $NODE_ID
 
 export EMAIL=<your email>
-export DOMAIN=traefik.ycit099.<yourdomain>
+export DOMAIN=traefik.codevteacher.com
 
 export USERNAME=root
 
@@ -148,7 +148,7 @@ docker stack deploy -c traefik-host.yml traefik
 ## Swarmpit web user interface for your Docker Swarm cluster
 
 ```
-export DOMAIN=swarmpit.ycit099.<yourdomain>
+export DOMAIN=swarmpit.codevteacher.com
 export NODE_ID=$(docker info -f '{{.Swarm.NodeID}}')
 docker node update --label-add swarmpit.db-data=true $NODE_ID
 docker node update --label-add swarmpit.influx-data=true $NODE_ID
