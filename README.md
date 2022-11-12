@@ -111,3 +111,36 @@ source $ZSH/oh-my-zsh.sh
 ## add zsh at the end of file of ~/.bashrc
 
 # follow the https://dockerswarm.rocks/ fo install docker swarm
+
+## steps
+
+```
+docker swarm init
+
+docker swarm init --advertise-addr <public address>
+```
+
+## Traefik Proxy with HTTPS
+
+```
+docker network create --driver=overlay traefik-public
+export NODE_ID=$(docker info -f '{{.Swarm.NodeID}}')
+
+docker node update --label-add traefik-public.traefik-public-certificates=true $NODE_ID
+
+export EMAIL=<your email>
+export DOMAIN=traefik.ycit099.<yourdomain>
+
+export USERNAME=root
+
+export PASSWORD=<strong password>
+
+export HASHED_PASSWORD=$(openssl passwd -apr1 $PASSWORD)
+
+echo $HASHED_PASSWORD
+
+
+curl -L dockerswarm.rocks/traefik-host.yml -o traefik-host.yml
+
+docker stack deploy -c traefik-host.yml traefik
+```
