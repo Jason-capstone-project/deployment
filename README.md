@@ -7,7 +7,10 @@
 
 ```
 ssh -i <key> <username>@codevteacher.com
+apt update
+apt install nano
 ```
+
 
 ## on your computer make sure you have ssh key
 
