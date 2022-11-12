@@ -109,3 +109,5 @@ source $ZSH/oh-my-zsh.sh
 ```
 
 ## add zsh at the end of file of ~/.bashrc
+
+# follow the https://dockerswarm.rocks/ fo install docker swarm
